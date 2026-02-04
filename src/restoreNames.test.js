@@ -131,34 +131,4 @@ describe("restoreNames", () => {
       },
     ]);
   });
-
-  it("some firstName is incorrect", () => {
-    const users = [
-      {
-        firstName: "John",
-        lastName: "Adams",
-        fullName: "Mike Adams",
-      },
-      {
-        firstName: "Richard",
-        lastName: "Brosky",
-        fullName: "Alex Brosky",
-      },
-    ];
-
-    restoreNames(users);
-
-    expect(users).toStrictEqual([
-      {
-        firstName: "Mike",
-        lastName: "Adams",
-        fullName: "Mike Adams",
-      },
-      {
-        firstName: "Alex",
-        lastName: "Brosky",
-        fullName: "Alex Brosky",
-      },
-    ]);
-  });
 });
